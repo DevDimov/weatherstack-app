@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
-    if (document.cookie.length == 0) {
-        displayForecast('Leeds, United Kingdom')
+    displayForecast('Leeds, United Kingdom')
+    // if (document.cookie.length == 0) {
+        
     // } else {
     //     let locations = getCookies()
     //     locations.forEach((location) => {
@@ -8,7 +9,7 @@ window.addEventListener('load', () => {
     //             displayForecast(location)
     //         }
     //     })
-    }
+    // }
 })
 
 const removeLocation = function() {
