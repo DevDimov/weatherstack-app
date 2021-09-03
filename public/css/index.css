@@ -1,0 +1,25 @@
+@import url("../css/main-forecast.css");
+@import url("../css/forecast-details.css");
+@import url("../css/add-location.css");
+
+/* Semi-bold 600, Regular 400, Light 300 */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    align-items: center;
+}
+
+#root {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}

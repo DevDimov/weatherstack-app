@@ -1,0 +1,43 @@
+.details-container > div {
+    border-bottom: #D3D3D3 solid 1px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-bottom: 2px;
+}
+
+.details-container > div > span:first-child {
+    font-weight: 300;
+}
+
+.details-container > div > span:nth-child(2) {
+    font-weight: 400;
+}
+
+.details-container {
+    box-sizing: border-box;
+    padding: 40px 40px 0px 40px;
+    width: 325px;
+    height: 325px;
+    border-radius: 50px;
+    background-color: #EEF8FF;
+    font-size: 16px;
+    transition-duration: 0.5s;
+    transform: translateY(270px);
+}
+
+#feelslike,
+#wind-speed {
+    cursor: pointer;
+}
+
+.slideup {
+    transition: all 0.5s ease;
+    transform: translateY(0);
+}
+
+.rotate180 {
+    transition: all 0.5s ease;
+    transform: rotate(180deg) translateY(-5px);
+}

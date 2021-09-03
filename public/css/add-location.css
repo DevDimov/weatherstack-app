@@ -1,0 +1,55 @@
+.empty-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+    width: 325px;
+    height: 325px;
+    border-radius: 50px;
+    border: #D3D3D3 solid 6px;
+    box-sizing: border-box;
+}
+
+.plus-icon {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    width: 50px;
+    cursor: pointer;
+    transition-duration: 0.4s;
+}
+
+.plus-icon:hover {
+    filter: brightness(0.4);
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 0;
+}
+
+#search-box {
+    margin: 5px 0 0 0;
+    font-weight: 400;
+    font-size: 20px;
+    opacity: 0;
+    font-family: 'Nunito';
+    padding: 5px;
+    text-align: center;
+    max-width: 60%;
+    border-radius: 5px;
+    border: #D3D3D3 solid 1px;
+    transition: all 0.5s ease;
+}
+
+#search-box:focus {
+    outline: none;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 10px 0 0 0;
+    text-align: center;
+    max-width: 70%;
+}
