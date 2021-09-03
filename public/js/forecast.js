@@ -1,5 +1,5 @@
 const fetchForecast = async function(location) {
-    const url = `http://api.weatherstack.com/current?access_key=${process.env.WS_API_KEY}&query=${location}`
+    const url = `http://api.weatherstack.com/current?access_key=${WS_API_KEY}&query=${location}`
     try {
         let response = await fetch(url);
         return await response.json();
