@@ -5,19 +5,20 @@ const fetchForecast = async function(location) {
         return await response.json();
     } catch (error) {
         console.log(error);
-        displayError(JSON.parse(error).error.type)
+        showError(JSON.parse(error).error.type)
     }
 }
 
 const displayForecast = async function(userInput) {
-    showLoading()
     if (userInput.length < 2) {
-        return displayError('Missing location')
+        return showError('Missing location')
     }
+    showStatus('Loading...')
     let data = await fetchForecast(userInput);
+
     if (data.hasOwnProperty('error')) {
         console.log(data);
-        displayError(data.error.type)
+        showError(data.error.type)
         return
     }
 
@@ -80,13 +81,12 @@ const insertHTML = function(html) {
     }
 }
 
-const displayError = function(error) {
+const showError = function(error) {
     document.querySelector('.empty-container > p').innerHTML = 'Unable to find location. <br> Error: ' + error
 }
 
-const showLoading = function() {
-    let html = `<p>Loading...</p>`
-    document.querySelector('.empty-container').innerHTML += html;
+const showStatus = function(status) {
+    document.querySelector('.empty-container > p').innerHTML = status
 }
 
 const fetchIcon = async function(str) {
