@@ -1,6 +1,6 @@
 const fetchForecast = async function(location) {
     // const WS_URL = 'http://localhost:3000/api/search?q='
-    const WS_URL = 'https://weatherstack-app.herokuapp.com/api/search&q='
+    const WS_URL = 'https://weatherstack-app.herokuapp.com/api/search?q='
 
     const url = WS_URL + location
     try {
