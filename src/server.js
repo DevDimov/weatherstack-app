@@ -2,11 +2,13 @@ require('dotenv').config({path: 'config/.env'})
 const express = require('express')
 const path = require('path')
 const fetch = require('node-fetch')
+const cors = require('cors')
 
 const app = express()
 const port = process.env.PORT || 8080
 
 const publicDirPath = path.join(__dirname, '../public')
+app.use(cors())
 app.use(express.static(publicDirPath))
 
 app.get('/', (req, res) => {
