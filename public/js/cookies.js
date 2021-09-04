@@ -13,6 +13,18 @@ const delCookies = function() {
     }
 }
 
+const delCookie = function(str) {
+    let cookies = getCookies()
+    let i=0
+    cookies.forEach((cookie) => {
+        i++
+        cName = 'location-' + i
+        if (cookie === str) {
+            document.cookie = `${cName}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/`
+        }
+    })
+}
+
 const getCookies = function() {
     const cDecoded = decodeURIComponent(document.cookie)
     const cArr = cDecoded.split('; ')

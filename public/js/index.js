@@ -1,16 +1,16 @@
-window.addEventListener('load', () => {
-    displayForecast('Leeds, United Kingdom')
-    // if (document.cookie.length == 0) {
-        
-    // } else {
-    //     let locations = getCookies()
-    //     locations.forEach((location) => {
-    //         if (location != '') {
-    //             displayForecast(location)
-    //         }
-    //     })
-    // }
-})
+// window.addEventListener('load', () => {  
+//     if (document.cookie.length == 0) {
+//         displayForecast('Leeds, United Kingdom')
+//     } else {
+//         let locations = getCookies()
+//         console.log(locations)
+//         locations.forEach((location) => {
+//             if (location != '') {
+//                 displayForecast(location)
+//             }
+//         })
+//     }
+// })
 
 const removeLocation = function() {
     document.getElementById('root').removeChild(window.event.target.parentElement.parentElement)
@@ -27,6 +27,7 @@ const createAddContainer = function() {
                 <img class="plus-icon" src="../images/add-location.svg" onclick="showInputBox()" alt="Add location icon"></img>
                 <h4>Add location</h4>
                 <input type="search" id="search-box" name="location-search" maxlength="50">
+                <p> </p>
             </div>`
             
         root.children[last].insertAdjacentHTML('afterend', html)
@@ -64,14 +65,14 @@ const showLocationDetails = function() {
 
 // window.addEventListener("beforeunload", () => {
 //     let containers = document.getElementsByClassName('container')
-//     console.log(containers)
 //     let cName = ''
 //     if (containers != null) {
-//         containers.forEach((container) => {
-//             cName = 'location-' + (containers.indexOf(container) + 1)
-//             cValue = container.querySelector('h2').innerHTML
+//         l = containers.length;
+//         for (i = 0; i < l; i++) {
+//             cName = 'location-' + (i + 1)
+//             cValue = containers[i].querySelector('h2').innerHTML
 //             setCookie(cName, cValue, 14)
-//         })
+//         }
 //     } else {
 //         delCookies()
 //     }

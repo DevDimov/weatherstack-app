@@ -1,10 +1,15 @@
 const fetchForecast = async function(location) {
-    const url = `http://api.weatherstack.com/current?access_key=${WS_API_KEY}&query=${location}`
+    // const WS_URL = 'http://localhost:3000/api/search?q='
+    const WS_URL = 'https://weatherstack-app.herokuapp.com/api/search&q='
+
+    const url = WS_URL + location
     try {
-        let response = await fetch(url);
-        return await response.json();
+        let response = await fetch(url)
+        let data = await response.json()
+        console.log(data)
+        return data
     } catch (error) {
-        console.log(error);
+        console.log(error)
         showError(JSON.parse(error).error.type)
     }
 }
@@ -17,7 +22,7 @@ const displayForecast = async function(userInput) {
     let data = await fetchForecast(userInput);
 
     if (data.hasOwnProperty('error')) {
-        console.log(data);
+        console.log(data)
         showError(data.error.type)
         return
     }
@@ -65,7 +70,6 @@ const displayForecast = async function(userInput) {
             </div>
         </div>`
 
-    console.log(data)
     insertHTML(html)
     createAddContainer()
 }
